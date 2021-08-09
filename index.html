@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <title>모바일 청첩장</title>
+    <!-- Jquery -->
+    <script src="/src/script/jquery-3.6.0.min.js"></script>
+    <script defer src="/src/script/main.js"></script>
+</head>
+<body>
+    <header class=" header">
+    <picture class="header__background">
+        <source media="(min-width: 1440px)" srcset="src/images/desktop-background.jpg">
+        <source media="(max-wdith : 700px)" srcset="src/images/mobile-background.jpg">
+        <img src="./src/images/desktop-background.jpg" alt="Background">
+    </picture>
+    <div class="container">
+        <h1 class="header__title">
+            Wedding invitation
+        </h1>
+        <p class="header__man">
+            김지훈
+        </p>
+        <p class="header__woman">
+            한예지
+        </p>
+        <p class="header__location">
+            2021. 08. 07<br>
+            토요일 낮 12:30<br>
+            김포 웨딩홀 2층 행복
+        </p>
+    </div>
+    </header>
+    <section class="section">
+        <div class="gallery__box">
+            <button class="gallery__close gallery__listContainer--hidden exit">
+                Cloas
+            </button>
+            <ul class="gallery__listContainer gallery__listContainer--hidden exit">
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_1.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_2.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_3.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_4.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_5.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_6.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_7.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_8.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+                <li class="gallery__itemlist">
+                    <img src="./src/images/card_index_9.jpg" alt="결혼 사진 갤러리 리스트" class="gallery__itemImage">
+                </li>
+            </ul>
+        </div>
+        
+        <article class="article">
+            <div class="article1__top">
+                <h2 class="article__subtitle">
+                    Invitation
+                </h2>
+                <p class="article__description">
+                    인생의 빛나는 별이 되어준 사람과 평생을 함께하려고 합니다.<br>
+                    서로의 인생에 빛나는 별이되어 평생을 반짝이며 사랑하기로 약속했습니다.
+                </p>
+                <p class="article__description">
+                    저희의 새로운 시작의 자리에 소중한 분을 모십니다.<br>
+                    따뜻한 격려와 발걸음에 보답하며 별처럼 살아가겠습니다.
+                </p>
+            </div>
+            <div class="article__container article__container--center">
+                <p class="article__M">
+                    M
+                </p>
+            </div>
+            <div class="article1__bottom">
+                <div class="article__container">
+                    <div class="article__container--left">
+                        <p class="article__family">
+                            <span class="article__sizeUp">
+                                김갑수
+                            </span>
+                            안혜숙의 장남
+                            <span class="article__sizeUp article__bold">
+                                김지훈
+                            </span>
+                        </p>
+                        <div class="article__call">
+                            <svg id="Call_Icon1" data-name="Call Icon" xmlns="http://www.w3.org/2000/svg" width="100"
+                                height="100" viewBox="0 0 120 120">
+                                <a xlink:href="tel:010-0000-0000" xlink:title="call 신부">
+                                    <path id="패스_3" data-name="패스 3"
+                                        d="M60,0a60,60,0,1,0,60,60A60,60,0,0,0,60,0Zm0,110.625A50.625,50.625,0,1,1,110.625,60,50.624,50.624,0,0,1,60,110.625Z"
+                                        fill="#fff" />
+                                    <path id="패스_4" data-name="패스 4"
+                                        d="M180.284,195.21c1.5,0,14.934-9.932,14.934-11.2s-15.036-10.74-16.337-10.74-5.666,5.235-6.843,5.817-8.533.373-16.726-7.819-11-17.621-11-19.1,6.835-6.055,7.024-7.13S142.33,128,140.837,128,128,141.786,128,142.934s1.038,15.926,19.75,34.634S178.787,195.2,180.284,195.21Z"
+                                        transform="translate(-101.609 -101.61)" fill="#929dff" />
+                                </a>
+                            </svg>
+
+                        </div>
+                    </div>
+                    <div class="article__container--right">
+                        <p class="article__family">
+                            <span class="article__sizeUp">
+                                한기범
+                            </span>
+                            이은주의 차녀
+                            <span class="article__sizeUp article__bold">
+                                한예지
+                            </span>
+                        </p>
+                        <div class="article__call">
+                            <svg id="Call_Icon2" data-name="Call Icon" xmlns="http://www.w3.org/2000/svg" width="100"
+                                height="100" viewBox="0 0 120 120">
+                                <a xlink:href="tel:010-0000-0000" xlink:title="call 신부">
+                                    <path id="패스_3" data-name="패스 3"
+                                        d="M60,0a60,60,0,1,0,60,60A60,60,0,0,0,60,0Zm0,110.625A50.625,50.625,0,1,1,110.625,60,50.624,50.624,0,0,1,60,110.625Z"
+                                        fill="#fff" />
+                                    <path id="패스_4" data-name="패스 4"
+                                        d="M180.284,195.21c1.5,0,14.934-9.932,14.934-11.2s-15.036-10.74-16.337-10.74-5.666,5.235-6.843,5.817-8.533.373-16.726-7.819-11-17.621-11-19.1,6.835-6.055,7.024-7.13S142.33,128,140.837,128,128,141.786,128,142.934s1.038,15.926,19.75,34.634S178.787,195.2,180.284,195.21Z"
+                                        transform="translate(-101.609 -101.61)" fill="#ff92a4" />
+                                </a>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+        <article class="article">
+            <h2 class="article__subtitle">
+                Gallery
+            </h2>
+            <div class="article__circleContainer">
+                <span class="article__circle article__circle--red"></span>
+                <span class="article__circle article__circle--yellow"></span>
+                <span class="article__circle article__circle--blue"></span>
+                <span class="article__circle article__circle--green"></span>
+            </div>
+            <div class="article__galleryContainer">
+                <figure class="gallery__card">
+                    <img src="src/images/card.jpg" alt="Card">
+                </figure>
+            </div>
+            
+        </article>
+        <article class="article">
+            <h2 class="article__subtitle">
+                Movie
+            </h2>
+            <video src="./src/video/movie.mp4" controls muted class="article__video">
+                이 사이트는 비디오를 지원하지 않습니다.
+            </video>
+        </article>
+        <article class="article">
+            <h2 class="article__subtitle">
+                Map
+            </h2>
+            <div class="article__center">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d939.4167671480533!2d126.70447067349045!3d37.63018582889875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5bfaf1bd667bc638!2z6rmA7Y-s7Luo67Kk7IWY7Juo65Sp7ZmA67aA7Y6Y!5e0!3m2!1sko!2skr!4v1628463481088!5m2!1sko!2skr"
+                width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="article__map">
+
+                </iframe>
+            </div>
+            <div class="article__directions">
+                <div class="directions__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+                        <image id="bus" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                    </svg>
+                    <h3 class="directions__subtitle">
+                        버스
+                    </h3>
+                    <p class="directions__paragraph">
+                        58번
+                    </p>
+                </div>
+                <div class="directions__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+                        <image id="train" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                    </svg>
+                    <h3 class="directions__subtitle">
+                        지하철
+                    </h3>
+                    <p class="directions__paragraph">
+                        걸포북변역 2번 출구
+                    </p>
+                </div>
+                <div class="directions__item">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+                        <image id="park" width="128" height="128" xlink:href="data:image/png;base64,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"/>
+                    </svg>
+                    <h3 class="directions__subtitle">
+                        주차장
+                    </h3>
+                    <p class="directions__paragraph">
+                        김포웨딩
+                    </p>
+                </div>
+            </div>
+            
+        </article>
+        
+    </section>
+    <footer class="footer">
+        <h2 class="footer__logo">
+            Wedding invitation
+        </h2>
+        <p class="footer__phone">
+            031-980-0011
+        </p>
+        <p class="footer__portfolio">
+            모바일 청첩장 포트폴리오
+        </p>
+    </footer>
+    </body>
+
+</html>

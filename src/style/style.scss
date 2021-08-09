@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR&family=Style+Script&display=swap');
+
+$font-title : 'Style Script';
+$font-subtitle : 'Black Han Sans';
+$font-paragraph : 'Noto Sans KR';
+
+$header-height : 100vh;
+
+@mixin Desktop
+{
+    @media screen and (min-width: 1441px)
+    {
+        @content;
+    }
+}
+@mixin Tablet
+{
+    @media screen and (min-width: 760px) and (max-width: 1024px)
+    {
+        @content;
+    }
+}
+@mixin Mobile
+{
+    @media screen and (max-width: 759px)
+    {
+        @content;
+    }
+}
+
+
+*,
+*::before,
+*::after
+{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+html
+{
+    font-size: 62.5%;
+}
+
+body
+{
+    font-family: $font-paragraph, sans-serif;
+    font-size : 16px;
+    min-height: 100vh;
+
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    color : white;
+}
+
+
+
+img
+{
+    width : inherit;
+    height: inherit;
+    vertical-align: middle;
+    object-fit: cover;
+}
+li
+{
+    list-style-type: none;
+}
+a
+{
+    text-decoration: none;
+    font-size: inherit;
+    color : inherit;
+}
+
+.header,
+.section,
+.article,
+.footer
+{
+    width : 100%;
+    font-size: 1em;
+    min-width: 320px;
+
+}
+
+.container
+{
+    width : calc(100% - 64px);
+    height: 100%;
+    margin : 0 auto;
+    padding : 2em;
+    //outline: 2px solid red;
+    min-width: 320px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.header
+{
+    height: $header-height;
+
+    position : relative;
+
+
+
+
+    &::before
+    {
+        content : '';
+        width: inherit;
+        height: inherit;
+
+        background-color: rgba(0,0,0,.5);
+
+        position : absolute;
+        left : 0;
+        top : 0;
+
+        z-index: 0;
+    }
+    &__background
+    {
+        position : fixed;
+
+        top : 0;
+        left: 0;
+        width: 100vw;
+        height: $header-height;
+
+        z-index: -5;
+
+        &::before
+        {
+            content: '';
+            background-color: rgba(0,0,0,.5);
+            width: 100vw;
+            height: inherit;
+
+            position: fixed;
+            top : 0;
+            left : 0;
+
+            z-index: -3;
+        }
+    }
+
+    &__title
+    {
+        position : relative;
+        z-index: 1;
+
+        font-family: $font-title, cursive;
+        font-size: 6em;
+
+        margin-top: 2em;
+        text-shadow: .2rem .2rem .2rem #444;
+
+        letter-spacing: 4px;
+    }
+
+    &__man, &__woman
+    {
+        font-size: 2em;
+
+        margin : 1em 0;
+        font-family: $font-subtitle, sans-serif;
+
+        text-shadow: .2rem .2rem .2rem #444;
+        letter-spacing: 4px;
+    }
+
+    &__location
+    {
+        font-size: 1.2em;
+
+
+        font-family: $font-paragraph, sans-serif;
+        text-shadow: .2rem .2rem .2rem #444;
+        letter-spacing: 4px;
+        line-height: 1.5;
+    }
+}
+
+
+
+
+
+.article
+{
+    height : 900px;
+    position: relative;
+    font-size: 1.6rem;
+    &:nth-child(1), &:nth-child(2)
+    {
+        background-color: white;
+    }
+    &:nth-child(3)
+    {
+        background-image: url('../images/bg2.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    &:nth-child(4), &:nth-child(5)
+    {
+        background-color: rgba(0,0,0,.5);
+        padding : .5em 0;
+    }
+
+
+    &__subtitle
+    {   
+        font-family: $font-subtitle, sans-serif;
+        font-size: 2em;
+        text-align: center;
+
+
+        text-shadow: .5px .5px .5px #fff;
+
+        letter-spacing: 3px;
+        text-transform: uppercase;
+
+        padding: 1em 0;
+
+        &--color
+        {
+            color : #61372D;
+        }
+    }
+    &__description
+    {
+        margin-top : 2em;
+        text-align: center;
+        font-family: $font-paragraph, sans-serif;
+        font-size: 1.5em;
+    }
+
+    &__container
+    {
+
+        position: absolute;
+        bottom: 4em;
+        left : 4em;
+
+        width: calc(100% - 8em);
+        overflow: hidden;
+        &--left
+        {
+            float : left;
+            text-align: center;
+        }
+        &--right
+        {
+            float : right;
+            text-align: center;
+        }
+
+        &--center
+        {
+            width : 150px;
+            height : 150px;
+
+            left : 50%;
+            top : 50%;
+
+            transform: translate(-50%, -50%);
+            z-index: 10;
+
+            background-color: #61372D;
+
+            border-radius: 50%;
+
+            box-shadow: 1px 1px 3px #fff inset;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+    &__M
+    {
+        font-family: $font-subtitle, sans-serif;
+        font-size: 4em;
+        text-shadow: 1px 1px 2px #fff;
+    }
+
+    &__family, &__groomBridal
+    {
+        font-size: 1.2em;
+        font-family: $font-paragraph, sans-serif;
+    }
+    &__call
+    {
+        margin : 0 1em;
+    }
+    &__sizeUp
+    {
+        font-size: 1.5em;
+    }
+    &__bold
+    {
+        font-weight: bold;
+    }                                                                                                               
+    &__circleContainer
+    {
+        width: 100%;
+        height : 500px;
+    }
+
+    &__circle
+    {
+        display: inline-block;
+        width : 400px;
+        height : 300px;
+
+        position : absolute;
+
+
+        border-radius: 50%;
+        opacity: .5;
+        filter: blur(50px);
+
+        &--red
+        {
+            background-color: #f44336;
+            left : 50%;
+            top : 20%;
+
+            transform: translateX(-50%);
+        }
+        &--yellow
+        {
+            background-color: #ffeb3b;
+            left : 65%;
+            top : 30%;
+
+            transform: translateX(-50%);
+        }
+        &--blue
+        {
+            background-color: #2196f3;
+            left : 50%;
+            top : 40%;
+
+            transform: translateX(-50%);
+        }
+        &--green
+        {
+            background-color: #8bc34a;
+            left : 30%;
+            top : 30%;
+
+            transform: translateX(-50%);
+        }
+    }
+
+    &__galleryContainer
+    {
+        position : absolute;
+        left : 50%;
+        top : 50%;
+        transform: translate(-50%, -50%);
+
+
+    }
+
+    &__video
+    {
+        display: inline-block;
+
+        position: absolute;
+
+        top : 20%;
+        left : 50%;
+
+        transform: translateX(-50%);
+    }
+
+    &__center
+    {
+        margin-top : 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__directions
+    {
+        padding-top: 2em;
+        text-align: center;
+
+        display: flex;
+
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+.directions
+{
+    
+    &__item
+    {
+
+    }
+}
+.gallery
+{
+    &__card
+    {
+        display: inline-block;
+        width: 350px;
+        height: 250px;
+
+        overflow: hidden;
+
+        border-top-left-radius: 5rem;
+        border-bottom-right-radius: 5rem;
+
+        box-shadow: .2rem .2rem .3rem #444;
+
+        cursor : pointer;
+        transition: all .5s ease;
+        &::before
+        {
+            content: '';
+            width : inherit;
+            height: inherit;
+
+            position : absolute;
+            left: 0;
+            top : 0;
+
+            background-color: rgba(0,0,0,.3);
+            border-top-left-radius: 5rem;
+            border-bottom-right-radius: 5rem;
+        }
+
+        &:hover
+        {
+            transform: scale(0.98);
+        }
+    }
+    &__box
+    {
+        position: absolute;
+
+        z-index: 100;
+
+        left : 50%;
+        top : 2000px;
+        transform: translate(-50%, -50%);
+        width: 60%;
+    }
+    &__listContainer
+    {
+        
+        opacity: 1;
+
+        
+        transition: opacity .5s ease-in-out;
+        
+        background-color: rgba(0,0,0,.8);
+        background-attachment: scroll;
+        padding : 4em;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap : 10px;
+        
+        border-radius: 2.5rem;
+
+        &--hidden
+        {
+            opacity: 0;
+        }
+
+        
+        
+
+        overflow: hidden;
+    }
+    &__itemlist
+    {
+        width: 200px;
+        cursor: pointer;
+
+        float: left;
+        transition: transform .5s ease-in;
+
+        &:hover
+        {
+            transform: scale(.98);
+        }
+    }
+    &__close
+    {
+        
+        all : unset;
+        position : absolute;
+        top : .2em;
+        left : 50%;
+        font-size: 1.5em;
+        cursor: pointer;
+
+        padding : .2em 1.6em;
+        border: 4px solid #fff;
+        border-radius: 5rem;
+
+        transform: translateX(-50%);
+        opacity: 1;
+        transition: all .5s ease-in;
+        &:hover
+        {
+            transform: translateX(-50%) scale(.98);
+        }
+
+    }
+}
+.pos
+{
+    &__left
+    {
+        left : 4.2rem;
+    }
+    &__right
+    {
+        right: 4.5rem;
+    }
+}
+.article1
+{
+    &__top
+    {
+        position : absolute;
+        width : 100%;
+        height : 50%;
+
+        background-color: #61372D;
+        z-index: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 75% 100%, 25% 100%, 0 70%);
+
+        box-shadow: .2rem .2rem .2rem rgba(0,0,0,.5) inset,
+                    .4rem .4rem .4rem rgba(0,0,0,.5);
+    }
+
+    &__bottom
+    {
+        position : relative;
+
+        width: 100%;
+        height : 100%;
+
+        background-color: lightseagreen;
+
+        z-index: 0;
+
+    }
+
+
+
+}
+
+
+.footer
+{
+    background-color: #61372D;
+    text-align: center;
+
+    padding : 2em;
+
+    &__logo
+    {
+        font-family: $font-title, cursive;
+        font-size: 2em;
+    }
+
+    &__phone, &__portfolio
+    {
+        padding-top: 1em;
+        font-family: $font-paragraph, sans-serif;
+        font-size: 1.4rem;
+    }
+}
+
+
+@include Tablet
+{
+    .article
+    {
+        font-size: 1.2rem;
+        
+
+        
+    }
+}
+
+@include Mobile
+{
+    .article
+    {
+        font-size: 1rem;
+
+        &__video
+        {
+            width: 90vw;
+        }
+        &__map
+        {   
+            width: 90vw;
+        }
+        &__directions
+        {
+            flex-direction: column;
+        }
+    }
+    .gallery
+    {
+        &__card
+        {
+            width: 90vw;
+        }
+    }
+}
+
+.exit
+{
+    display: none;
+}
